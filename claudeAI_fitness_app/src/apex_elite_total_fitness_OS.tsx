@@ -738,14 +738,91 @@ function App() {
   return (
     <div style={{ background:'#09090b', fontFamily:'system-ui, -apple-system, sans-serif', color:'white' }}>
       <style>{`
-        input::placeholder { color: rgba(255,255,255,0.18); }
-        input:focus { outline: none; border-color: rgba(59,130,246,0.5) !important; box-shadow: 0 0 0 3px rgba(59,130,246,0.08); }
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 4px; }
-        button { font-family: inherit; }
-        @media print { .no-print { display: none !important; } }
-      `}</style>
+  input::placeholder { color: rgba(255,255,255,0.18); }
+  input:focus { outline: none; border-color: rgba(59,130,246,0.5) !important; box-shadow: 0 0 0 3px rgba(59,130,246,0.08); }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 4px; }
+  button { font-family: inherit; }
+
+  @media print {
+    .no-print { display: none !important; }
+
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+
+    body, html {
+      background: #09090b !important;
+    }
+
+    /* Boost all faint white text to fully visible */
+    [style*="color: rgba(255,255,255,0.2)"],
+    [style*="color:rgba(255,255,255,0.2)"],
+    [style*="color: rgba(255,255,255,0.22)"],
+    [style*="color:rgba(255,255,255,0.22)"],
+    [style*="color: rgba(255,255,255,0.25)"],
+    [style*="color:rgba(255,255,255,0.25)"],
+    [style*="color: rgba(255,255,255,0.28)"],
+    [style*="color:rgba(255,255,255,0.28)"],
+    [style*="color: rgba(255,255,255,0.3)"],
+    [style*="color:rgba(255,255,255,0.3)"],
+    [style*="color: rgba(255,255,255,0.35)"],
+    [style*="color:rgba(255,255,255,0.35)"],
+    [style*="color: rgba(255,255,255,0.38)"],
+    [style*="color:rgba(255,255,255,0.38)"],
+    [style*="color: rgba(255,255,255,0.4)"],
+    [style*="color:rgba(255,255,255,0.4)"],
+    [style*="color: rgba(255,255,255,0.42)"],
+    [style*="color:rgba(255,255,255,0.42)"],
+    [style*="color: rgba(255,255,255,0.45)"],
+    [style*="color:rgba(255,255,255,0.45)"],
+    [style*="color: rgba(255,255,255,0.5)"],
+    [style*="color:rgba(255,255,255,0.5)"],
+    [style*="color: rgba(255,255,255,0.52)"],
+    [style*="color:rgba(255,255,255,0.52)"],
+    [style*="color: rgba(255,255,255,0.55)"],
+    [style*="color:rgba(255,255,255,0.55)"],
+    [style*="color: rgba(255,255,255,0.6)"],
+    [style*="color:rgba(255,255,255,0.6)"],
+    [style*="color: rgba(255,255,255,0.65)"],
+    [style*="color:rgba(255,255,255,0.65)"],
+    [style*="color: rgba(255,255,255,0.7)"],
+    [style*="color:rgba(255,255,255,0.7)"],
+    [style*="color: rgba(255,255,255,0.8)"],
+    [style*="color:rgba(255,255,255,0.8)"],
+    [style*="color: rgba(255,255,255,0.82)"],
+    [style*="color:rgba(255,255,255,0.82)"],
+    [style*="color: rgba(255,255,255,0.85)"],
+    [style*="color:rgba(255,255,255,0.85)"] {
+      color: #ffffff !important;
+    }
+
+    /* Keep accent colors vivid */
+    [style*="color: #3b82f6"],
+    [style*="color:#3b82f6"] { color: #3b82f6 !important; }
+
+    [style*="color: #bef264"],
+    [style*="color:#bef264"] { color: #bef264 !important; }
+
+    [style*="color: #f59e0b"],
+    [style*="color:#f59e0b"] { color: #f59e0b !important; }
+
+    [style*="color: #f87171"],
+    [style*="color:#f87171"] { color: #f87171 !important; }
+
+    [style*="color: #34d399"],
+    [style*="color:#34d399"] { color: #34d399 !important; }
+
+    /* Keep card backgrounds */
+    [style*="background: rgba(255,255,255,0.04)"],
+    [style*="background:rgba(255,255,255,0.04)"] {
+      background: rgba(255,255,255,0.08) !important;
+    }
+  }
+`}</style>
 
       <div style={{ maxWidth:680, margin:'0 auto', padding:'0 16px 48px' }}>
         {/* Header */}
