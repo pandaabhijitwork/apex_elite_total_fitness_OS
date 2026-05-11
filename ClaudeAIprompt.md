@@ -95,3 +95,5 @@ Total Fitness OS. and I want it to suggest the Ideal weight on the profile secti
 
 
 Why After typing a single letter its being unselected
+
+When I'm doing export for the pdf of the dashboard the fonts are coming too light.
