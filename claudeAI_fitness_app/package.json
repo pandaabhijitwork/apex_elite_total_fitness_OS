@@ -2,7 +2,7 @@
   "name": "apex-elite-fitness-os",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://pandaabhijitwork.github.io/AI-Project-Artifacts/",
+  "homepage": "https://pandaabhijitwork.github.io/apex_elite_total_fitness_OS/",
   "dependencies": {
     "@types/node": "^16.0.0",
     "@types/react": "^18.0.0",
